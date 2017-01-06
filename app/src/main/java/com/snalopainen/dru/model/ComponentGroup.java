@@ -22,7 +22,7 @@ public class ComponentGroup extends Component {
     }
 
     @Override
-    protected int getUnreadIndicatiorCount() {
+    public int getUnreadIndicatiorCount() {
         int count = 0;
         Iterator<Component> iterator = componentsList.iterator();
         while (iterator.hasNext()) {
@@ -37,35 +37,58 @@ public class ComponentGroup extends Component {
         return count;
     }
 
+    private List<Drawable> childrenDrawable;
+
+    private List<Drawable> getChildrenDrawables() {
+        Iterator<Component> iterator = componentsList.iterator();
+        while (iterator.hasNext()) {
+            Component component = (Component) iterator.next();
+            childrenDrawable.add(component.getDrawable());
+        }
+        return childrenDrawable;
+    }
+
+    private List<String> childrenTitle;
+
+    private List<String> getChildrenTitles() {
+        Iterator<Component> iterator = componentsList.iterator();
+        while (iterator.hasNext()) {
+            Component component = (Component) iterator.next();
+            childrenTitle.add(component.getTitle());
+        }
+        return childrenTitle;
+    }
+
+
     @Override
-    protected Drawable getDrawable() {
+    public Drawable getDrawable() {
         return null;
     }
 
     @Override
-    protected String getTitle() {
+    public String getTitle() {
         return null;
     }
 
     @Override
-    protected boolean isVisible() {
+    public boolean isVisible() {
         return false;
     }
 
     @Override
-    protected void add(Component component) {
+    public void add(Component component) {
         componentsList.add(component);
 
     }
 
     @Override
-    protected void remove(Component component) {
+    public void remove(Component component) {
 
         componentsList.remove(component);
     }
 
     @Override
-    protected Component getChild() {
+    public Component getChild() {
         return null;
     }
 }

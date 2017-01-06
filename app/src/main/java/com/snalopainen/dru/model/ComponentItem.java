@@ -15,37 +15,37 @@ public class ComponentItem extends Component {
     private boolean hasProfile;
 
     @Override
-    protected int getUnreadIndicatiorCount() {
+    public int getUnreadIndicatiorCount() {
         return (bVisible && bNewFeature && unReadCnt > 0 && hasProfile) ? 1 : 0;
     }
 
     @Override
-    protected Drawable getDrawable() {
+    public Drawable getDrawable() {
         return null;
     }
 
     @Override
-    protected String getTitle() {
+    public String getTitle() {
         return null;
     }
 
     @Override
-    protected boolean isVisible() {
+    public boolean isVisible() {
         return false;
     }
 
     @Override
-    protected void add(Component component) {
+    public void add(Component component) {
 
     }
 
     @Override
-    protected void remove(Component component) {
+    public void remove(Component component) {
 
     }
 
     @Override
-    protected Component getChild() {
+    public Component getChild() {
         return null;
     }
 }

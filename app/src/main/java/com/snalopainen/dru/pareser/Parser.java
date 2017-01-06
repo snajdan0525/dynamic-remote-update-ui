@@ -12,6 +12,9 @@ public class Parser {
     private  void parser(){
         buildModel.buildModel();
         Component component = buildModel.getComponentRoot();
+        component.getUnreadIndicatiorCount();
+        component.getDrawable();
+        component.getTitle();
     }
 
 }

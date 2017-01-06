@@ -9,17 +9,17 @@ import android.graphics.drawable.Drawable;
 public abstract class Component {
 
     protected   boolean bUnreadIndicatior;
-    protected abstract int getUnreadIndicatiorCount();
+    public abstract int getUnreadIndicatiorCount();
 
-    protected abstract Drawable getDrawable();
+    public abstract Drawable getDrawable();
 
-    protected abstract String getTitle();
+    public abstract String getTitle();
 
-    protected abstract boolean isVisible();
+    public abstract boolean isVisible();
 
-    protected abstract void add(Component component);
+    public abstract void add(Component component);
 
-    protected abstract void remove(Component component);
+    public abstract void remove(Component component);
 
-    protected abstract Component getChild();
+    public abstract Component getChild();
 }
