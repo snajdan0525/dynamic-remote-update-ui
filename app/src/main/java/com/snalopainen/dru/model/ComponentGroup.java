@@ -17,6 +17,10 @@ public class ComponentGroup extends Component {
         componentsList = new ArrayList<Component>();
     }
 
+    public List<Component> getComponentsList() {
+        return componentsList;
+    }
+
     @Override
     protected int getUnreadIndicatiorCount() {
         int count = 0;
